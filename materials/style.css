@@ -1,0 +1,941 @@
+/*IMPORTANT*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'), url(https://example.com/MaterialIcons-Regular.woff) format('woff'), url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    font-family: "poppins";
+    --primary: rgb(211, 13, 13);
+    --primaryShade: white;
+    --secondaryShade: rgb(245, 242, 248);
+    --tertiaryShade: rgb(47, 48, 66);
+    --quaternaryShade: rgb(51, 52, 71);
+}
+
+body::-webkit-scrollbar {
+    width: 14px;
+    background: #e3e9f0;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #36394550;
+    width: 100%;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #36394580;
+}
+
+
+/*NAVBAR*/
+
+.navBodyStopOverflow {
+    overflow-y: hidden;
+}
+
+.navTopBar {
+    position: fixed;
+    width: 95%;
+    padding: 0 2.5%;
+    height: 55px;
+    line-height: 55px;
+    transition: all 0.3s;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navTopBarNotTop {
+    background: var(--primaryShade);
+    box-shadow: rgba(0, 0, 0, 0.06) 0 12px 12px 0;
+}
+
+.navParent:hover .navTopBar {
+    background: var(--primaryShade);
+    box-shadow: rgba(0, 0, 0, 0.06) 0 12px 12px 0;
+}
+
+.navParent:focus-within .navTopBar {
+    background: var(--primaryShade);
+    box-shadow: rgba(0, 0, 0, 0.06) 0 12px 12px 0;
+}
+
+.navChild {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    max-width: 100%;
+}
+
+.navLeft {}
+
+.navSideBarButton {
+    float: left;
+    height: 45px;
+    width: 45px;
+    margin: 5px 10px;
+    margin-left: 0;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-right: 25px;
+}
+
+.navSideBarButton:hover {}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 30px;
+    height: 4px;
+    background-color: rgb(0, 0, 0);
+    margin: 8.5px 7.5px;
+    transition: all 0.2s;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 3px 6px 1px;
+}
+
+.barActive1 {
+    background-color: var(--primary);
+    top: 7px;
+    transform: rotate(-30deg);
+    width: 20px;
+}
+
+.barActive2 {
+    background-color: var(--primary);
+    width: 40px;
+}
+
+.barActive3 {
+    background-color: var(--primary);
+    top: -7px;
+    transform: rotate(30deg);
+    width: 20px;
+}
+
+.navTopper {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+    text-decoration: none;
+    width: fit-content;
+    padding: 0 8px;
+}
+
+.navTopper:hover {
+    background: var(--secondaryShade);
+}
+
+.navIcon {
+    width: 45px;
+    height: 45px;
+    padding: 5px 0;
+}
+
+.navHeader {
+    margin: 0;
+    margin-left: 10px;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+}
+
+.navRight {}
+
+.navRightLeft {
+    display: flex;
+}
+
+.navRightLeft a {
+    text-decoration: none;
+    color: black;
+    align-items: center;
+    height: 55px;
+    padding: 0 20px;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    opacity: 0.7;
+    font-weight: bold;
+}
+
+.navRightLeft a:hover {
+    background: var(--secondaryShade);
+    opacity: 1;
+}
+
+.navRightLeft a span {
+    padding-right: 5px;
+}
+
+.navRightRight {
+    display: flex;
+    align-items: center;
+    padding: 0 15px
+}
+
+.navRightButton {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    background: var(--primary);
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 2px 8px 0;
+    transition: all 0.3s;
+    display: flex;
+}
+
+.navRightButton:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 6px 8px 0, inset rgba(0, 0, 0, 0.12) 0 0 0 10000px;
+}
+
+.navRightButton:focus {
+    box-shadow: rgba(0, 0, 0, 0.4) 0 8px 14px 0, inset rgba(0, 0, 0, 0.2) 0 0 0 10000px;
+}
+
+.navRightButtonAlt {
+    background: transparent;
+    color: var(--primary);
+    box-shadow: none;
+    border-radius: 0;
+    height: 55px;
+    line-height: 55px;
+}
+
+.navRightButtonAlt:hover {
+    box-shadow: inset rgba(0, 0, 0, 0) 0 0 0 1000px, inset var(--primary) 0 -4px 0 0;
+}
+
+.navRightButtonAlt:focus {
+    box-shadow: inset rgba(0, 0, 0, 0.2) 0 0 0 1000px, inset var(--primary) 0 -55px 0 0;
+    color: white;
+}
+
+.navRightIcon {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    height: 55px;
+    padding: 0 5px;
+    transition: all 0.3s;
+}
+
+.navRightIcon:hover {
+    background: var(--secondaryShade);
+}
+
+.navRightIcon span {
+    font-size: 45px;
+}
+
+.navSideBar {
+    background: var(--secondaryShade);
+    width: 250px;
+    min-height: calc(100vh - 55px);
+    padding: 10px 0;
+    left: -250px;
+    top: 55px;
+    position: fixed;
+    box-shadow: rgba(0, 0, 0, 0.12) 0 0 20px 0;
+    z-index: 999;
+    overflow: visible;
+    opacity: 0;
+    transition: opacity 0.2s, left 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.navSideBarActive {
+    left: 0;
+    opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0.12) 0 0 20px 0, rgba(0, 0, 0, 0.2) 0 0 0 10000px;
+}
+
+.navSideBar h3 {
+    padding-left: 15px;
+    font-size: 22px;
+    margin: 10px 0;
+    pointer-events: none;
+}
+
+.navSideBar a {
+    padding-left: 15px;
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    opacity: 0.7;
+    font-weight: bold;
+}
+
+.navSideBar a:hover {
+    box-shadow: rgba(0, 0, 0, 0.08) 0 0 20px 0;
+    background: var(--primaryShade);
+    opacity: 1;
+}
+
+.navSideBar a span {
+    padding-right: 5px;
+}
+
+.navTopBar .navDropDownButton {
+    user-select: none;
+}
+
+.navTopBar .navDropDownButton:hover {
+    opacity: 1;
+}
+
+.navTopBar .navDropDownParent {
+    position: relative;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.navTopBar .navDropDownContentParent {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    z-index: 1;
+    right: -13px;
+    top: 0;
+    background: transparent;
+    padding: 12px;
+    transition: all 0.3s;
+}
+
+.navTopBar .navDropDownContentChild {
+    box-shadow: rgba(0, 0, 0, 0.08) 0 12px 22px 2px, rgba(0, 0, 0, 0.055) 0 12px 12px;
+    border-radius: 4px;
+    overflow: hidden;
+    min-width: 200px;
+    width: max-content;
+    transition: all 0.3s;
+    background: var(--primaryShade);
+    display: flex;
+    flex-direction: column;
+}
+
+.navTopBar .navDropDownContentChild:hover {
+    box-shadow: rgba(0, 0, 0, 0.12) 0 12px 22px 2px, rgba(0, 0, 0, 0.075) 0 12px 12px;
+}
+
+.navTopBar .navDropDownContentChild a {}
+
+.navTopBar .navDropDownContentChild a:hover {
+    background: var(--secondaryShade);
+}
+
+.navTopBar .navDropDownParent:hover .navDropDownContentParent {
+    opacity: 1;
+    pointer-events: all;
+    top: 50px;
+}
+
+.navTopBar .navDropDownParent:focus-within .navDropDownContentParent {
+    opacity: 1;
+    pointer-events: all;
+    top: 50px;
+}
+
+.navTopBar .navDropDownParent:hover .navDropDownButton {
+    background: var(--secondaryShade);
+}
+
+.navSideBar .navDropDownButton {
+    user-select: none;
+}
+
+.navSideBar .navDropDownButton:hover {
+    opacity: 1;
+}
+
+.navSideBar .navDropDownParent {
+    position: relative;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.navSideBar .navDropDownContentParent {
+    opacity: 0;
+    pointer-events: none;
+    overflow: hidden;
+    background: transparent;
+    transition: all 0.3s;
+    position: relative;
+    left: -30px;
+    max-height: 0;
+}
+
+.navSideBar .navDropDownContentChild {
+    display: flex;
+    flex-direction: column;
+}
+
+.navSideBar .navDropDownContentChild a:hover {
+    background: var(--primaryShade);
+}
+
+.navSideBar .navDropDownParent:focus-within .navDropDownContentParent {
+    opacity: 1;
+    pointer-events: all;
+    max-height: 1000px;
+    left: 0;
+    transition-delay: 0.25s;
+}
+
+.navSideBar .navDropDownParent:hover .navDropDownButton {
+    background: var(--primaryShade);
+}
+
+
+/*CONTENT*/
+
+.content {
+    min-height: 100vh;
+}
+
+.containerPrimary {
+    background: var(--primaryShade);
+    padding: 40px 5%;
+}
+
+.containerSecondary {
+    background: var(--secondaryShade);
+    padding: 40px 5%;
+}
+
+.containerTertiary {
+    background: var(--tertiaryShade);
+    padding: 40px 5%;
+    color: white;
+}
+
+.image {
+    width: 60%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    margin: auto;
+    user-select: none;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 6px 12px 0;
+    border-radius: 4px;
+}
+
+.button {
+    text-decoration: none;
+    color: white;
+    margin: 15px auto;
+    display: block;
+    width: fit-content;
+    background: var(--primary);
+    padding: 8px 20px;
+    font-weight: 300;
+    font-size: 18px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 4px 10px 0;
+    transition: all 0.3s;
+    user-select: none;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.button:hover {
+    box-shadow: rgba(0, 0, 0, 0.3) 0 4px 10px 0, rgba(0, 0, 0, 0.15) 0 12px 16px 0, inset rgba(0, 0, 0, 0.12) 0 0 0 10000px;
+}
+
+.button:focus {
+    box-shadow: rgba(0, 0, 0, 0.3) 0 4px 10px 0, rgba(0, 0, 0, 0.15) 0 18px 26px 0, inset rgba(0, 0, 0, 0.2) 0 0 0 10000px;
+}
+
+.button span {
+    font-size: 25px;
+    padding-right: 8px;
+}
+
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+    padding: 0 5%;
+    align-items: flex-start;
+}
+
+.cardParent {
+    margin: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 10px 30px 0;
+    width: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.cardHeader {
+    padding: 0 1rem;
+    font-size: 28px;
+}
+
+.cardText {
+    padding: 0 2rem;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.cardImage {
+    width: 270px;
+    height: 270px;
+}
+
+.displayParent {
+    width: 90%;
+    padding: 40px 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media all and (max-width: 800px) {
+    .displayParent {
+        flex-direction: column;
+    }
+}
+
+.displayBackgroundImage {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("images/image2.jpg");
+    box-shadow: inset rgba(0, 0, 0, 0.5) 0 0 0 1000px;
+    color: white;
+}
+
+.displayChild {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media all and (max-width: 800px) {
+    .displayChild {
+        width: 70%;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .displayImage {
+        width: 90%;
+    }
+}
+
+.displayHeader {
+    font-size: 2.2rem;
+    margin: 0;
+}
+
+.displayText {
+    font-size: 16px;
+    width: 70%;
+    margin: 30px auto;
+}
+
+@media all and (max-width: 500px) {
+    .displayText {
+        width: 90%;
+    }
+}
+
+.displayImage {}
+
+.boxParent {
+    width: 70%;
+    margin: auto;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 10px 30px 0;
+    display: flex;
+    justify-content: center;
+}
+
+@media all and (max-width: 1050px) {
+    .boxParent {
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .boxParent {
+        width: 90%;
+    }
+}
+
+.boxChild {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media all and (max-width: 750px) {
+    .boxChild {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+.boxHeader {
+    font-size: 2.2rem;
+    margin: 0;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.boxText {
+    font-size: 15px;
+    width: 70%;
+    margin: 20px auto;
+}
+
+.boxImage {}
+
+.sliderParent {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media all and (max-width: 800px) {
+    .sliderParent {
+        width: 100%;
+    }
+}
+
+.slideController {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    margin: auto;
+    background: var(--secondaryShade);
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.09) 0 3px 8px 0;
+    user-select: none;
+}
+
+.slideController:hover {
+    box-shadow: rgba(0, 0, 0, 0.2) 0 5px 18px 0;
+}
+
+.slideController span {
+    font-size: 30px;
+}
+
+.slideControllerLeft {
+    left: 10px;
+}
+
+.slideControllerRight {
+    right: 10px;
+}
+
+.slideParent {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.slideActive {
+    display: flex;
+}
+
+.slideTopper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 80px;
+    position: relative;
+}
+
+.slideImage {
+    width: 50%;
+}
+
+@media all and (max-width: 1000px) {
+    .slideImage {
+        width: 80%;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .slideImage {
+        width: 100%;
+    }
+}
+
+.slideHeader {
+    font-size: 2.2rem;
+    margin: 0;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.slideText {
+    width: 70%;
+    margin: 20px auto;
+    font-size: 15px;
+}
+
+
+/*HERO*/
+
+.heroParent {
+    width: 90%;
+    padding: 0 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media all and (min-width: 800px) {
+    .heroParent {
+        min-height: 100vh;
+    }
+}
+
+@media all and (max-width: 800px) {
+    .heroParent {
+        flex-direction: column;
+        padding: 65px 5%;
+    }
+}
+
+.heroBackgroundImage {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("images/image1.jpg");
+    box-shadow: inset rgba(0, 0, 0, 0.5) 0 0 0 1000px;
+    color: white;
+}
+
+.heroChild {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media all and (max-width: 800px) {
+    .heroChild {
+        width: 70%;
+    }
+}
+
+.heroHeader {
+    font-size: 2.75rem;
+    margin: 0;
+    text-align: center;
+}
+
+.heroText {
+    font-size: 17px;
+    width: 80%;
+    margin: 30px auto;
+}
+
+@media all and (max-width: 600px) {
+    .heroText {
+        width: 100%;
+    }
+}
+
+.heroButton {
+    padding: 10px 30px;
+    font-size: 19px;
+}
+
+.heroImage {
+    width: 70%;
+    box-shadow: none;
+}
+
+@media all and (max-width: 600px) {
+    .heroImage {
+        width: 90%;
+    }
+}
+
+
+/**/
+
+.tertiaryCardContainer .cardParent {
+    background: var(--quaternaryShade);
+}
+
+.secondaryBoxParent {
+    background: var(--primaryShade);
+}
+
+
+/*FOOTER*/
+
+.footer {
+    --footerPrimary: #2B92F1;
+    --footerTertiary: rgb(40, 40, 53);
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    padding: 20px 5%;
+    font-family: "poppins", sans-serif;
+    background: var(--footerTertiary);
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+@media all and (max-width: 850px) {
+    .footer {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.footerLeft {
+    display: flex;
+    flex-wrap: wrap;
+    width: fit-content;
+    flex-direction: column;
+}
+
+@media all and (max-width: 850px) {
+    .footerLeft {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.footerTopper {
+    display: flex;
+    height: fit-content;
+    align-items: center;
+}
+
+@media all and (max-width: 850px) {
+    .footerTopper {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.footerIcon {
+    margin: 0 10px;
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 4px 30px 0;
+}
+
+.footerHeader {
+    margin: 0;
+    font-size: 27px;
+}
+
+.footerCopyright {
+    text-align: center;
+}
+
+.footerContentContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: max-content;
+    justify-content: center;
+}
+
+@media all and (max-width: 850px) {
+    .footerContentContainer {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.footerContentChild {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footerContentHeader {
+    font-size: 21px;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+@media all and (max-width: 850px) {
+    .footerContentHeader {
+        padding-top: 20px;
+    }
+}
+
+.footerLink {
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--footerPrimary);
+    font-weight: 600;
+    transition: all 0.3s;
+    padding: 4px 0;
+    width: fit-content;
+}
+
+@media all and (max-width: 850px) {
+    .footerLink {
+        margin: auto;
+    }
+}
+
+.footerLink:hover {
+    box-shadow: var(--footerPrimary) 0 2px 0 0;
+}
+
+.footerLink:focus {
+    box-shadow: var(--footerPrimary) 0 2px 0 0;
+    opacity: 0.8;
+}
+
+.footerLink:visited {
+    box-shadow: var(--footerPrimary) 0 0 0 0;
+    opacity: 0.7;
+}
