@@ -13,7 +13,7 @@
 <body>
     <script src="materials/scroller.js"></script>
 
-    <nav class="navParent" data-too-big="1065">
+    <nav class="navParent" data-too-big="900">
         <div class="navTopBar">
             <div class="navChild navLeft">
 
@@ -28,7 +28,7 @@
                 <a href="#" class="navTopper">
 
                     <img src="materials/images/carsonIcon.png" alt="" class="navIcon animate">
-                    <h1 class="navHeader animate">Header</h1>
+                    <h1 class="navHeader animate">Carson Burke</h1>
 
                 </a>
 
@@ -36,34 +36,22 @@
             <div class="navChild navRight">
                 <div class="navRightLeft animate">
 
-                    <a href="#"><span class="material-icons-outlined">
-                        home
-                        </span>Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
-                    <div class="navDropDownParent" tabindex="0">
-                        <a class="navDropDownButton"><span class="material-icons-outlined">
-                            home
-                            </span>Dropdown Button</a>
-                        <div class="navDropDownContentParent">
-                            <div class="navDropDownContentChild">
-                                <a href="#"><span class="material-icons-outlined">
-                                    home
-                                    </span>Link 1</a>
-                                <a href="#">Link 2</a>
-                                <a href="#">Link 3</a>
-                            </div>
-                        </div>
-                    </div>
+                    <a class="waveButton" data-wave-theme="dark" data-wave-strength="0.1" href="#mywork"><span class="material-icons-outlined">
+                        folder_open
+                        </span>My work</a>
+                    <a class="waveButton" data-wave-theme="dark" data-wave-strength="0.1" href="#"><span class="material-icons-outlined">
+                        person
+                        </span>Why me</a>
+                    <a class="waveButton" data-wave-theme="dark" data-wave-strength="0.1" href="#"><span class="material-icons-outlined">
+                        info
+                        </span>About</a>
 
                 </div>
                 <div class="navRightRight">
 
-                    <a href="#" class="navRightButton animate">Sign up</a>
-                    <a href="#" class="navRightButtonAlt navRightButton animate">Login</a>
-                    <a href="#" class="navRightIcon animate"><span class="material-icons-outlined">
-                        account_circle
-                        </span></a>
+                    <a href="#contact" class="navRightButton waveButton animate" data-wave-strength="0.6"><span class="material-icons-outlined">
+                        chat
+                        </span>Contact</a>
 
                 </div>
             </div>
@@ -72,7 +60,7 @@
 
             <h3>Header</h3>
 
-            <a href="#"><span class="material-icons-outlined">
+            <a href="#mywork"><span class="material-icons-outlined">
                 home
                 </span>Link 1</a>
             <a href="#">Link 2</a>
@@ -110,48 +98,30 @@
     </nav>
 
     <main class="content">
-        <section class="heroParent containerSecondary">
+        <section class="heroParent heroBackgroundImage containerPrimary parallaxifyBg" data-speed-multiplier="5">
             <div class="heroChild">
 
                 <header class="heroTopper">
 
-                    <h1 class="heroHeader animate floatDown" data-time="0.4">Header</h1>
+                    <h1 class="heroHeader animate floatDown" data-time="0.4">Carson Burke</h1>
                     <p class="heroText animate floatDown" data-time="0.6">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, vero praesentium ad, harum at officia non asperiores numquam minus explicabo dolorum eaque! Sed ullam cumque beatae et veritatis nobis velit?
                     </p>
 
-                    <a href="#" class="button heroButton animate floatUp" data-time="1"><span class="material-icons-outlined">
-                        play_arrow
-                        </span>Get Started</a>
-
-                </header>
-
-            </div>
-            <div class="heroChild">
-
-                <img src="materials/images/image1.jpg" alt="" class="heroImage image animate floatRight" data-time="1.9">
-
-            </div>
-        </section>
-        <section class="heroParent heroBackgroundImage containerPrimary parallaxifyBg" data-speed-multiplier="0.8">
-            <div class="heroChild">
-
-                <header class="heroTopper">
-
-                    <h1 class="heroHeader animate floatDown" data-time="0.4">Header</h1>
-                    <p class="heroText animate floatDown" data-time="0.6">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, vero praesentium ad, harum at officia non asperiores numquam minus explicabo dolorum eaque! Sed ullam cumque beatae et veritatis nobis velit?
-                    </p>
-
-                    <a href="#" class="button heroButton animate floatUp" data-time="1"><span class="material-icons-outlined">
-                        play_arrow
-                        </span>Get Started</a>
+                    <a href="#mywork" class="button heroButton animate floatUp waveButton"><span class="material-icons-outlined">
+                        folder_open
+                        </span>My Work</a>
 
                 </header>
 
             </div>
         </section>
-        <section class="displayParent containerSecondary">
+        <section class="containerSecondary">
+
+            as
+
+        </section>
+        <section class="displayParent containerPrimary">
 
             <div class="displayChild">
 
@@ -161,12 +131,12 @@
             </div>
             <div class="displayChild animate floatUp">
 
-                <img src="materials/images/image2.jpg" alt="" class="displayImage image parallaxify">
+                <img src="materials/images/image2.jpg" alt="" class="displayImage image">
 
             </div>
 
         </section>
-        <section class="displayParent containerPrimary">
+        <section class="displayParent containerSecondary">
 
             <div class="displayChild">
 
@@ -188,20 +158,20 @@
         </section>
         <section class="containerTertiary">
 
-            <div class="tertiaryCardContainer cardContainer">
+            <div class="cardContainer">
                 <div class="cardParent animate floatUp" data-time="0.4" data-show-value="300">
 
                     <h3 class="cardHeader">Header</h3>
                     <p class="cardText">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus quaerat, quae, minus sint similique aliquam officia laudantium veritatis ad sunt vitae praesentium quia placeat amet quod corrupti. Minima, ratione asperiores!</p>
 
                 </div>
-                <div class="cardParent animate floatUp" data-time="0.6" data-show-value="300">
+                <div class="transparentCardParent cardParent animate floatUp" data-time="0.6" data-show-value="300">
 
                     <img src="materials/images/image2.jpg" alt="" class="cardImage image">
                     <p class="cardText">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus quaerat, quae, minus sint similique aliquam officia laudantium veritatis ad sunt vitae praesentium quia placeat amet quod corrupti. Minima, ratione asperiores!</p>
 
                 </div>
-                <div class="cardParent animate floatUp" data-time="0.8" data-show-value="300">
+                <div class="transparentCardParent cardParent animate floatUp" data-time="0.8" data-show-value="300">
 
                     <img src="materials/images/image1.jpg" alt="" class="cardImage image">
                     <h3 class="cardHeader">Header</h3>
@@ -210,7 +180,7 @@
             </div>
 
         </section>
-        <section class="containerPrimary">
+        <section class="containerSecondary">
 
             <div class="secondaryBoxParent boxParent animate floatUp">
                 <div class="boxChild">
@@ -227,7 +197,7 @@
             </div>
 
         </section>
-        <section class="containerSecondary">
+        <section class="containerPrimary">
 
             <div class="secondaryBoxParent boxParent animate floatUp">
                 <div class="boxChild">
@@ -239,7 +209,7 @@
             </div>
 
         </section>
-        <section class="containerPrimary">
+        <section class="containerSecondary">
             <div class="sliderParent">
 
                 <div class="slideParent">
@@ -285,29 +255,66 @@
 
             </div>
         </section>
+        <section class="containerTertiary" id="mywork">
+
+            <div class="menuButtonContainer">
+                <button class="menuButton menuItemButton waveButton animate floatUp" data-time="0.3" data-wave-theme="dark" onclick="menuSortItems('menuItem')">All</button>
+                <button class="menuButton htmlcssButton waveButton animate floatUp" data-time="0.4" data-wave-theme="dark" onclick="menuSortItems('htmlcss')">HTML & CSS</button>
+                <button class="menuButton javaScriptButton waveButton animate floatUp" data-timee="0.5" data-wave-theme="dark" onclick="menuSortItems('javaScript')">JavaScript</button>
+                <button class="menuButton designButton waveButton animate floatUp" data-time="0.6" data-wave-theme="dark" onclick="menuSortItems('design')">Design</button>
+            </div>
+
+            <div class="menuContainer">
+                <div class="menuItem htmlcss animate floatUp" data-show-value="0">
+                    HTML & CSS
+                </div>
+                <div class="menuItem javaScript animate floatUp" data-show-value="0">
+                    JavaScript
+                </div>
+                <div class="menuItem design animate floatUp" data-show-value="0">
+                    Design
+                </div>
+            </div>
+
+        </section>
+        <section class="displayParent containerPrimary">
+
+            <div class="displayChild">
+
+                <h3 class="displayHeader animate floatUp">Header</h3>
+                <p class="displayText animate floatUp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil corporis error at asperiores consequatur cupiditate tenetur quisquam vel, facilis ipsa incidunt iste a alias autem blanditiis, hic quidem repellat! Recusandae!</p>
+
+            </div>
+            <div class="displayChild animate floatUp">
+
+                <img src="materials/images/image2.jpg" alt="" class="displayImage image">
+
+            </div>
+
+        </section>
     </main>
 
     <footer class="footer">
-        <div class="footerLeft">
-            <div class="footerTopper animate floatDown" data-time="0.5" data-show-value="-200">
+        <div class="footerLeft animate floatDown" data-time="0.5" data-show-value="0">
+            <div class="footerTopper">
 
                 <img src="materials/images/carsonIcon.png" alt="" class="footerIcon">
                 <h1 class="footerHeader">Carson Burke</h1>
 
             </div>
-            <div class="footerCopyright animate floatDown" data-time="0.6" data-show-value="-200">© 2021</div>
+            <div class="footerCopyright">© 2021</div>
         </div>
-        <div class="footerContentContainer animate floatDown">
-            <div class="footerContentChild animate floatDown" data-time="0.8" data-show-value="-200">
+        <div class="footerContentContainer animate floatDown" data-time="0.5" data-show-value="0">
+            <div class="footerContentChild">
 
                 <h3 class="footerContentHeader">Portfolio</h3>
 
                 <a href="#" target="_blank" class="footerLink">Home</a>
-                <a href="#" target="_blank" class="footerLink">My Projects</a>
+                <a href="#" target="_blank" class="footerLink">My Work</a>
                 <a href="#" target="_blank" class="footerLink">Contact</a>
 
             </div>
-            <div class="footerContentChild animate floatDown" data-time="1" data-show-value="-200">
+            <div class="footerContentChild">
 
                 <h3 class="footerContentHeader">Web dev tools</h3>
 
@@ -315,7 +322,7 @@
                 <a href="https://carsonburke.github.io/Parallaxify-JS-parallax-framework/" target="_blank" class="footerLink">Parallax</a>
 
             </div>
-            <div class="footerContentChild animate floatDown" data-time="1.2" data-show-value="-200">
+            <div class="footerContentChild">
 
                 <h3 class="footerContentHeader">Other</h3>
 
@@ -326,6 +333,8 @@
         </div>
     </footer>
 
+    <script src="materials/wave.js"></script>
+    <script src="materials/dynamicMenu.js"></script>
     <script src="materials/parallaxify.js"></script>
     <script src="materials/script.js"></script>
 </body>

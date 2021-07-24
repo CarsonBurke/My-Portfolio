@@ -1,10 +1,11 @@
+window.addEventListener("load", parallax)
 window.addEventListener("scroll", parallax)
 
 function parallax() {
 
     function getPosition(item) {
 
-        let top = (item.getBoundingClientRect().top / window.innerHeight * 100).toFixed(0)
+        let top = (item.getBoundingClientRect().top / window.innerHeight * 100).toFixed(2)
 
         return top
     }
@@ -17,9 +18,8 @@ function parallax() {
 
             item.dataset.speedMultiplier = "0.7"
         }
-        item.style.position = "relative"
 
-        item.style.top = getPosition(item) * item.dataset.speedMultiplier + "px"
+        item.style.transform = "translate3d(0, " + getPosition(item) * item.dataset.speedMultiplier + "px, 0)"
     }
 
     let imagesToParallax = document.getElementsByClassName("parallaxifyBg")
@@ -28,17 +28,17 @@ function parallax() {
 
         function getPosition(item) {
 
-            let top = (item.getBoundingClientRect().top / window.innerHeight / 2 * 100).toFixed(0)
+            let top = (item.getBoundingClientRect().top / window.innerHeight * 100).toFixed(2)
 
             return top
         }
 
         if (!item.dataset.speedMultiplier) {
 
-            item.dataset.speedMultiplier = "0.5"
+            item.dataset.speedMultiplier = "3"
         }
 
-        item.style.backgroundAttachment = "none"
-        item.style.backgroundPositionY = getPosition(item) * item.dataset.speedMultiplier + "%"
+        item.style.backgroundAttachment = "fixed"
+        item.style.backgroundPositionY = getPosition(item) * item.dataset.speedMultiplier + "px"
     }
 }

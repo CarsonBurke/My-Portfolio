@@ -1,6 +1,7 @@
 /*IMPORTANT*/
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
 @font-face {
     font-family: 'Material Icons';
     font-style: normal;
@@ -13,12 +14,12 @@ body {
     margin: 0;
     scroll-behavior: smooth;
     overflow-x: hidden;
-    font-family: "poppins";
-    --primary: rgb(211, 13, 13);
-    --primaryShade: white;
-    --secondaryShade: rgb(245, 242, 248);
-    --tertiaryShade: rgb(47, 48, 66);
-    --quaternaryShade: rgb(51, 52, 71);
+    font-family: "Poppins";
+    --primary: #2b92f1;
+    --primaryShade: hsl(0, 0%, 100%);
+    --secondaryShade: hsl(200, 20%, 97%);
+    --tertiaryShade: hsl(240, 18%, 20%);
+    --quaternaryShade: hsl(230, 20%, 22%);
 }
 
 body::-webkit-scrollbar {
@@ -52,21 +53,25 @@ body::-webkit-scrollbar-thumb:hover {
     z-index: 1000;
     display: flex;
     justify-content: space-between;
+    --navColor: rgb(255, 255, 255);
 }
 
 .navTopBarNotTop {
     background: var(--primaryShade);
-    box-shadow: rgba(0, 0, 0, 0.06) 0 12px 12px 0;
+    box-shadow: rgba(0, 0, 0, 0.04) 0 18px 18px 0;
+    --navColor: rgb(0, 0, 0);
 }
 
 .navParent:hover .navTopBar {
     background: var(--primaryShade);
-    box-shadow: rgba(0, 0, 0, 0.06) 0 12px 12px 0;
+    box-shadow: rgba(0, 0, 0, 0.04) 0 18px 18px 0;
+    --navColor: rgb(0, 0, 0);
 }
 
 .navParent:focus-within .navTopBar {
     background: var(--primaryShade);
-    box-shadow: rgba(0, 0, 0, 0.06) 0 12px 12px 0;
+    box-shadow: rgba(0, 0, 0, 0.04) 0 18px 18px 0;
+    --navColor: rgb(0, 0, 0);
 }
 
 .navChild {
@@ -101,7 +106,7 @@ body::-webkit-scrollbar-thumb:hover {
     transition: all 0.2s;
     position: relative;
     border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0 3px 6px 1px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 1px 4px 0;
 }
 
 .barActive1 {
@@ -145,8 +150,9 @@ body::-webkit-scrollbar-thumb:hover {
 .navHeader {
     margin: 0;
     margin-left: 10px;
-    color: rgb(0, 0, 0);
     font-size: 30px;
+    font-weight: 500;
+    color: var(--navColor);
 }
 
 .navRight {}
@@ -157,7 +163,6 @@ body::-webkit-scrollbar-thumb:hover {
 
 .navRightLeft a {
     text-decoration: none;
-    color: black;
     align-items: center;
     height: 55px;
     padding: 0 20px;
@@ -165,12 +170,20 @@ body::-webkit-scrollbar-thumb:hover {
     display: flex;
     align-items: center;
     font-size: 18px;
-    opacity: 0.7;
+    opacity: 0.9;
     font-weight: bold;
+    font-weight: 350;
+    color: var(--navColor);
 }
 
 .navRightLeft a:hover {
-    background: var(--secondaryShade);
+    box-shadow: inset var(--primary) 0 -3px 0 0;
+    opacity: 1;
+}
+
+.navRightLeft a:focus {
+    color: var(--primary);
+    box-shadow: inset var(--primary) 0 -3px 0 0;
     opacity: 1;
 }
 
@@ -181,7 +194,6 @@ body::-webkit-scrollbar-thumb:hover {
 .navRightRight {
     display: flex;
     align-items: center;
-    padding: 0 15px
 }
 
 .navRightButton {
@@ -192,12 +204,15 @@ body::-webkit-scrollbar-thumb:hover {
     height: 40px;
     line-height: 40px;
     padding: 0 20px;
-    border-radius: 6px;
+    border-radius: 3px;
     font-size: 18px;
     font-weight: bold;
     box-shadow: rgba(0, 0, 0, 0.25) 0 2px 8px 0;
     transition: all 0.3s;
     display: flex;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
 }
 
 .navRightButton:hover {
@@ -208,6 +223,10 @@ body::-webkit-scrollbar-thumb:hover {
     box-shadow: rgba(0, 0, 0, 0.4) 0 8px 14px 0, inset rgba(0, 0, 0, 0.2) 0 0 0 10000px;
 }
 
+.navRightButton span {
+    margin-right: 5px;
+}
+
 .navRightButtonAlt {
     background: transparent;
     color: var(--primary);
@@ -215,6 +234,7 @@ body::-webkit-scrollbar-thumb:hover {
     border-radius: 0;
     height: 55px;
     line-height: 55px;
+    transition: height 0s line-height 0s border-radius 0s;
 }
 
 .navRightButtonAlt:hover {
@@ -222,7 +242,10 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .navRightButtonAlt:focus {
-    box-shadow: inset rgba(0, 0, 0, 0.2) 0 0 0 1000px, inset var(--primary) 0 -55px 0 0;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 6px 8px 0, inset rgba(0, 0, 0, 0.2) 0 0 0 1000px, inset var(--primary) 0 -55px 0 0;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 3px;
     color: white;
 }
 
@@ -230,10 +253,10 @@ body::-webkit-scrollbar-thumb:hover {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: black;
     height: 55px;
     padding: 0 5px;
     transition: all 0.3s;
+    color: var(--navColor);
 }
 
 .navRightIcon:hover {
@@ -269,9 +292,11 @@ body::-webkit-scrollbar-thumb:hover {
 
 .navSideBar h3 {
     padding-left: 15px;
-    font-size: 22px;
+    font-size: 24px;
     margin: 10px 0;
     pointer-events: none;
+    font-weight: 400;
+    color: var(--navColor);
 }
 
 .navSideBar a {
@@ -279,13 +304,13 @@ body::-webkit-scrollbar-thumb:hover {
     height: 40px;
     line-height: 40px;
     text-decoration: none;
-    color: black;
     transition: all 0.3s;
     font-size: 18px;
     display: flex;
     align-items: center;
-    opacity: 0.7;
-    font-weight: bold;
+    opacity: 0.9;
+    font-weight: 350;
+    color: var(--navColor);
 }
 
 .navSideBar a:hover {
@@ -326,7 +351,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .navTopBar .navDropDownContentChild {
     box-shadow: rgba(0, 0, 0, 0.08) 0 12px 22px 2px, rgba(0, 0, 0, 0.055) 0 12px 12px;
-    border-radius: 4px;
+    border-radius: 3px;
     overflow: hidden;
     min-width: 200px;
     width: max-content;
@@ -431,6 +456,12 @@ body::-webkit-scrollbar-thumb:hover {
     color: white;
 }
 
+.containerQuaternary {
+    background: var(--quaternaryShade);
+    padding: 40px 5%;
+    color: white;
+}
+
 .image {
     width: 60%;
     aspect-ratio: 1 / 1;
@@ -448,23 +479,23 @@ body::-webkit-scrollbar-thumb:hover {
     display: block;
     width: fit-content;
     background: var(--primary);
-    padding: 8px 20px;
-    font-weight: 300;
+    padding: 8px 30px;
+    font-weight: 350;
     font-size: 18px;
-    box-shadow: rgba(0, 0, 0, 0.3) 0 4px 10px 0;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 4px 10px 0;
     transition: all 0.3s;
     user-select: none;
-    border-radius: 6px;
+    border-radius: 3px;
     display: flex;
     align-items: center;
 }
 
 .button:hover {
-    box-shadow: rgba(0, 0, 0, 0.3) 0 4px 10px 0, rgba(0, 0, 0, 0.15) 0 12px 16px 0, inset rgba(0, 0, 0, 0.12) 0 0 0 10000px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 4px 10px 0, rgba(0, 0, 0, 0.15) 0 12px 16px 0, inset rgba(0, 0, 0, 0.12) 0 0 0 10000px;
 }
 
 .button:focus {
-    box-shadow: rgba(0, 0, 0, 0.3) 0 4px 10px 0, rgba(0, 0, 0, 0.15) 0 18px 26px 0, inset rgba(0, 0, 0, 0.2) 0 0 0 10000px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 8px 14px 0, rgba(0, 0, 0, 0.15) 0 18px 26px 0, inset rgba(0, 0, 0, 0.2) 0 0 0 10000px;
 }
 
 .button span {
@@ -472,16 +503,119 @@ body::-webkit-scrollbar-thumb:hover {
     padding-right: 8px;
 }
 
+
+/*HERO*/
+
+.heroParent {
+    width: 90%;
+    padding: 0 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media all and (min-width: 800px) {
+    .heroParent {
+        min-height: 100vh;
+    }
+}
+
+@media all and (max-width: 800px) {
+    .heroParent {
+        flex-direction: column;
+        padding: 65px 5%;
+    }
+}
+
+.heroBackgroundImage {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("images/heroImage.jpg");
+    box-shadow: inset rgba(0, 0, 0, 0.55) 0 0 0 1000px;
+    color: white;
+}
+
+.heroChild {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media all and (max-width: 800px) {
+    .heroChild {
+        width: 70%;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .heroChild {
+        width: 90%;
+    }
+}
+
+.heroHeader {
+    font-size: 2.75rem;
+    margin: 0;
+    text-align: center;
+    font-weight: 500;
+    --textShadowAmount: 0.13;
+    text-shadow: rgba(0, 0, 0, var(--textShadowAmount)) 0 1px 5px, rgba(0, 0, 0, var(--textShadowAmount)) 0 1px 5px, rgba(0, 0, 0, var(--textShadowAmount)) 0 1px 5px;
+}
+
+.heroText {
+    font-size: 18px;
+    width: 80%;
+    margin: 30px auto;
+    margin-bottom: 0;
+    font-weight: 300;
+}
+
+@media all and (max-width: 600px) {
+    .heroText {
+        width: 100%;
+    }
+}
+
+.heroButton {
+    padding: 10px 40px;
+    font-size: 19px;
+    margin: 30px auto;
+}
+
+.heroImage {
+    width: 70%;
+    box-shadow: rgba(0, 0, 0, 0.4) 0 60px 130px 0;
+}
+
+@media all and (max-width: 600px) {
+    .heroImage {
+        width: 100%;
+    }
+}
+
+
+/*CARDS*/
+
 .cardContainer {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
     width: 90%;
     padding: 0 5%;
     align-items: flex-start;
 }
 
+@media all and (max-width: 1150px) {
+    .cardContainer {
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
 .cardParent {
+    background: var(--quaternaryShade);
     margin: 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 0 10px 30px 0;
     width: 290px;
@@ -493,21 +627,40 @@ body::-webkit-scrollbar-thumb:hover {
     padding-bottom: 10px;
 }
 
+@media all and (max-width: 1150px) {
+    .cardParent {
+        margin: 10px auto;
+    }
+}
+
+.transparentCardParent {
+    background: transparent;
+    box-shadow: none;
+}
+
 .cardHeader {
     padding: 0 1rem;
     font-size: 28px;
+    font-weight: 450;
 }
 
 .cardText {
     padding: 0 2rem;
     font-size: 16px;
     line-height: 26px;
+    opacity: 0.9;
+    font-weight: 300;
 }
 
 .cardImage {
-    width: 270px;
-    height: 270px;
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    box-shadow: none;
 }
+
+
+/*DISPLAY*/
 
 .displayParent {
     width: 90%;
@@ -554,12 +707,14 @@ body::-webkit-scrollbar-thumb:hover {
 .displayHeader {
     font-size: 2.2rem;
     margin: 0;
+    font-weight: 450;
 }
 
 .displayText {
     font-size: 16px;
     width: 70%;
     margin: 30px auto;
+    font-weight: 300;
 }
 
 @media all and (max-width: 500px) {
@@ -570,14 +725,21 @@ body::-webkit-scrollbar-thumb:hover {
 
 .displayImage {}
 
+
+/*BOX*/
+
+.secondaryBoxParent {
+    background: var(--primaryShade);
+}
+
 .boxParent {
     width: 70%;
     margin: auto;
     padding: 15px;
-    border-radius: 6px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 10px 30px 0;
+    box-shadow: rgba(0, 0, 0, 0.05) 0 12px 48px 0;
     display: flex;
     justify-content: center;
+    border: 1px solid rgb(223, 223, 223);
 }
 
 @media all and (max-width: 1050px) {
@@ -611,15 +773,22 @@ body::-webkit-scrollbar-thumb:hover {
     margin: 0;
     margin-top: 20px;
     text-align: center;
+    font-weight: 450;
 }
 
 .boxText {
     font-size: 15px;
     width: 70%;
     margin: 20px auto;
+    font-weight: 300;
 }
 
-.boxImage {}
+.boxImage {
+    box-shadow: rgba(0, 0, 0, 0.22) 0 20px 30px 0;
+}
+
+
+/*SLIDER*/
 
 .sliderParent {
     width: 60%;
@@ -646,27 +815,40 @@ body::-webkit-scrollbar-thumb:hover {
     align-items: center;
     border-radius: 100%;
     margin: auto;
-    background: var(--secondaryShade);
+    background: var(--primaryShade);
     cursor: pointer;
     transition: all 0.3s;
-    box-shadow: rgba(0, 0, 0, 0.09) 0 3px 8px 0;
+    box-shadow: rgba(0, 0, 0, 0.08) 0 4px 28px 0;
     user-select: none;
 }
 
+@media all and (max-width: 800px) {
+    .slideController {
+        width: 40px;
+        height: 40px;
+    }
+}
+
 .slideController:hover {
-    box-shadow: rgba(0, 0, 0, 0.2) 0 5px 18px 0;
+    box-shadow: rgba(0, 0, 0, 0.12) 0 10px 30px 0;
 }
 
 .slideController span {
-    font-size: 30px;
+    font-size: 28px;
+}
+
+@media all and (max-width: 800px) {
+    .slideController span {
+        font-size: 24px;
+    }
 }
 
 .slideControllerLeft {
-    left: 10px;
+    left: 0;
 }
 
 .slideControllerRight {
-    right: 10px;
+    right: 0;
 }
 
 .slideParent {
@@ -686,6 +868,12 @@ body::-webkit-scrollbar-thumb:hover {
     align-items: center;
     padding: 0 80px;
     position: relative;
+}
+
+@media all and (max-width: 800px) {
+    .slideTopper {
+        padding: 0 45px;
+    }
 }
 
 .slideImage {
@@ -709,104 +897,77 @@ body::-webkit-scrollbar-thumb:hover {
     margin: 0;
     margin-top: 20px;
     text-align: center;
+    font-weight: 450;
 }
 
 .slideText {
     width: 70%;
     margin: 20px auto;
     font-size: 15px;
+    font-weight: 300;
 }
 
 
-/*HERO*/
+/*MENU*/
 
-.heroParent {
-    width: 90%;
-    padding: 0 5%;
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.menuButtonContainer {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px 0;
+    flex-wrap: wrap;
 }
 
-@media all and (min-width: 800px) {
-    .heroParent {
-        min-height: 100vh;
-    }
-}
-
-@media all and (max-width: 800px) {
-    .heroParent {
-        flex-direction: column;
-        padding: 65px 5%;
-    }
-}
-
-.heroBackgroundImage {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-image: url("images/image1.jpg");
-    box-shadow: inset rgba(0, 0, 0, 0.5) 0 0 0 1000px;
+.menuButton {
+    background: var(--primary);
     color: white;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    padding: 10px 40px;
+    font-size: 18px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0 12px 56px 0;
+    transition: all 0.3s;
+    border-radius: 3px;
 }
 
-.heroChild {
-    width: 50%;
+.menuButton:hover {
+    box-shadow: rgba(0, 0, 0, 0) 0 12px 36px 0, inset rgba(0, 0, 0, 0.3) 0 0 0 10000px;
+}
+
+.menuButtonActive {
+    box-shadow: rgba(0, 0, 0, 0) 0 12px 36px 0, inset rgba(0, 0, 0, 0.3) 0 0 0 10000px;
+}
+
+.menuContainer {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
+    flex-wrap: wrap;
 }
 
-@media all and (max-width: 800px) {
-    .heroChild {
-        width: 70%;
-    }
-}
-
-.heroHeader {
-    font-size: 2.75rem;
-    margin: 0;
+.menuItem {
     text-align: center;
-}
-
-.heroText {
-    font-size: 17px;
-    width: 80%;
-    margin: 30px auto;
-}
-
-@media all and (max-width: 600px) {
-    .heroText {
-        width: 100%;
-    }
-}
-
-.heroButton {
-    padding: 10px 30px;
-    font-size: 19px;
-}
-
-.heroImage {
-    width: 70%;
-    box-shadow: none;
-}
-
-@media all and (max-width: 600px) {
-    .heroImage {
-        width: 90%;
-    }
-}
-
-
-/**/
-
-.tertiaryCardContainer .cardParent {
+    font-size: 20px;
+    margin: 10px;
+    padding: 10px;
+    width: 250px;
+    height: 250px;
     background: var(--quaternaryShade);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 12px 40px 0;
 }
 
-.secondaryBoxParent {
-    background: var(--primaryShade);
+.menuItemHide {
+    display: none;
 }
 
 
@@ -819,7 +980,6 @@ body::-webkit-scrollbar-thumb:hover {
     flex-wrap: wrap;
     color: white;
     padding: 20px 5%;
-    font-family: "poppins", sans-serif;
     background: var(--footerTertiary);
     justify-content: space-between;
     overflow: hidden;
@@ -829,6 +989,7 @@ body::-webkit-scrollbar-thumb:hover {
     .footer {
         flex-direction: column;
         justify-content: center;
+        padding: 40px 5%;
     }
 }
 
@@ -843,6 +1004,7 @@ body::-webkit-scrollbar-thumb:hover {
     .footerLeft {
         width: 100%;
         justify-content: center;
+        padding-bottom: 20px;
     }
 }
 
@@ -870,11 +1032,13 @@ body::-webkit-scrollbar-thumb:hover {
 
 .footerHeader {
     margin: 0;
-    font-size: 27px;
+    font-size: 25px;
+    font-weight: 450;
 }
 
 .footerCopyright {
     text-align: center;
+    font-weight: 350;
 }
 
 .footerContentContainer {
@@ -893,7 +1057,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .footerContentChild {
-    padding: 0 20px;
+    padding: 0 18px;
     display: flex;
     flex-direction: column;
 }
@@ -902,6 +1066,7 @@ body::-webkit-scrollbar-thumb:hover {
     font-size: 21px;
     margin: 0;
     padding-bottom: 10px;
+    font-weight: 400;
 }
 
 @media all and (max-width: 850px) {
@@ -913,11 +1078,14 @@ body::-webkit-scrollbar-thumb:hover {
 .footerLink {
     font-size: 16px;
     text-decoration: none;
-    color: var(--footerPrimary);
-    font-weight: 600;
+    font-weight: 500;
     transition: all 0.3s;
     padding: 4px 0;
     width: fit-content;
+    background-size: 210%;
+    background-image: linear-gradient(90deg, var(--footerPrimary) 50%, transparent 50%);
+    background-position-x: 100%;
+    color: var(--footerPrimary);
 }
 
 @media all and (max-width: 850px) {
@@ -927,7 +1095,9 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .footerLink:hover {
-    box-shadow: var(--footerPrimary) 0 2px 0 0;
+    background-position-x: 0;
+    color: white;
+    /* box-shadow: var(--footerPrimary) 0 2px 0 0; */
 }
 
 .footerLink:focus {

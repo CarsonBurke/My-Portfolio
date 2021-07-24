@@ -11,53 +11,50 @@ function addStyles() {
     @keyframes floatUp {
         0% {
             opacity: 0;
-            top: 200px;
+            transform: translate3d(0, 200px, 0);
         }
         30% {
             opacity: 0;
         }
         100% {
             opacity: 1;
-            top: 0;
+            
         }
     }
     @keyframes floatDown {
         0% {
             opacity: 0;
-            top: -200px;
+            transform: translate3d(0, -200px, 0);
         }
         30% {
             opacity: 0;
         }
         100% {
             opacity: 1;
-            top: 0;
         }
     }
     @keyframes floatLeft {
         0% {
             opacity: 0;
-            left: 200px;
+            transform: translate3d(200px, 0, 0);
         }
         30% {
             opacity: 0;
         }
         100% {
             opacity: 1;
-            left: 0;
         }
     }
     @keyframes floatRight {
         0% {
             opacity: 0;
-            left: -200px;
+            transform: translate3d(-200px, 0, 0);
         }
         30% {
             opacity: 0;
         }
         100% {
             opacity: 1;
-            left: 0;
         }
     }
     @keyframes still {
@@ -75,13 +72,11 @@ function addStyles() {
     .animate {
         opacity: 0;
         pointer-events: none;
-        position: relative;
     }
     .animateShow {
         opacity: 1;
         pointer-events: all;
         top: 0;
-        left: 0;
         animation-name: still;
     }
     .floatUp {}
