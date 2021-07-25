@@ -242,3 +242,17 @@ async function sendMessage(element, icon, requirements) {
 
     element.classList.add("sendButtonActive")
 }
+
+function changeText(element, text) {
+
+    element.childNodes[1].style.transform = "rotate(360deg)"
+
+    element.childNodes[2].innerText = text
+
+    element.childNodes[2].style.transition = "none"
+
+    element.childNodes[2].style.maxWidth = "200px"
+
+    element.classList.remove("callButtonDefault")
+    element.classList.add("callButtonActive")
+}

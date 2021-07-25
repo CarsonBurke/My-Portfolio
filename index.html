@@ -124,16 +124,7 @@
 
         <div class="containerImage parallaxifyBg" style="background-image: url('materials/images/myWork.jpg');">
 
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path class="svgSecondary" fill-opacity="1" d="M0,224L1440,160L1440,0L0,0Z"></path></svg>
-
-            <section class="containerTransparent displayParent" id="myWork">
-                <div class="displayChild">
-
-                    <h3 class="displayHeader transparentHeader animate floatUp">My Work</h3>
-                </div>
-            </section>
-
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="svgFlipped"><path class="svgSecondary" fill-opacity="1" d="M0,224L1440,160L1440,0L0,0Z"></path></svg>
+            <h3 class="transparentHeader animate floatUp" id="myWork">My Work</h3>
 
         </div>
         <section class="containerSecondary">
@@ -178,16 +169,7 @@
         </section>
         <div class="containerImage parallaxifyBg" style="background-image: url( 'materials/images/whyMe.jpg');">
 
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path class="svgSecondary" fill-opacity="1" d="M0,224L1440,160L1440,0L0,0Z"></path></svg>
-
-            <section class="containerTransparent displayParent" id="whyMe">
-                <div class="displayChild">
-
-                    <h3 class="displayHeader transparentHeader animate floatUp">Why Me</h3>
-                </div>
-            </section>
-
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="svgFlipped"><path class="svgPrimary" fill-opacity="1" d="M0,224L1440,160L1440,0L0,0Z"></path></svg>
+            <h3 class="transparentHeader animate floatUp" id="whyMe">Why Me</h3>
 
         </div>
         <section class="displayParent containerPrimary">
@@ -207,16 +189,7 @@
         </section>
         <div class="containerImage parallaxifyBg" style="background-image: url( 'materials/images/aboutMe.jpg');">
 
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path class="svgPrimary" fill-opacity="1" d="M0,224L1440,160L1440,0L0,0Z"></path></svg>
-
-            <section class="containerTransparent displayParent" id="aboutMe">
-                <div class="displayChild">
-
-                    <h3 class="displayHeader transparentHeader animate floatUp">About Me</h3>
-                </div>
-            </section>
-
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="svgFlipped"><path class="svgSecondary" fill-opacity="1" d="M0,224L1440,160L1440,0L0,0Z"></path></svg>
+            <h3 class="transparentHeader animate floatUp" id="aboutMe">About Me</h3>
 
         </div>
         <section class="displayParent containerSecondary">
@@ -233,22 +206,29 @@
         </section>
         <div class="containerImage parallaxifyBg" style="background-image: url('materials/images/mountains.jpg');">
 
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path class="svgSecondary" fill-opacity="1" d="M0,224L1440,160L1440,0L0,0Z"></path></svg>
+            <section class="imageChild parallaxifyBg" id="contact">
 
-            <section class="displayParent parallaxifyBg" id="contact">
+                <h3 class="transparentHeader contactImageHeader animate floatUp" id="contactMe">Contact Me</h3>
 
                 <form class="contactParent  animate floatUp">
-
-                    <h3 class="displayHeader contactHeader">Send Me a Message</h3>
 
                     <input id="contactName" required type="name" placeholder="Name" class="input">
 
                     <textarea id="contactMessage" required spellcheck="true" autocapitalize="true" autocomplete="true" name="" placeholder="Message" class="textArea"></textarea>
 
-                    <a class="contactAnchor" href="#contact"><button type="submit" class="button waveButton" id="sendButton" onclick="sendMessage(this, 'done', ['contactName', 'contactMessage'])">
-                        <span class="material-icons-outlined">
-                            send
-                            </span><strong>Send</strong></button></a>
+                    <div class="contactButtonContainer">
+
+                        <button type="button" class="button waveButton" id="sendButton" onclick="sendMessage(this, 'done', ['contactName', 'contactMessage'])">
+                            <span class="material-icons-outlined">
+                                send
+                                </span><strong>Send</strong></button>
+
+                        <button type="button" class="button waveButton callButtonDefault" id="sendButton" onclick="changeText(this, '778-834-9818')">
+                                    <span class="material-icons-outlined">
+                                        call
+                            </span><strong></strong></button>
+
+                    </div>
 
                 </form>
 

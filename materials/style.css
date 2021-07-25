@@ -472,18 +472,18 @@ body::-webkit-scrollbar-thumb:hover {
 
 .svgPrimary {
     fill: var(--primaryShade);
+    max-width: 100vw;
+    overflow: hidden;
 }
 
 .svgSecondary {
     fill: var(--secondaryShade);
-}
-
-.svgFooter {
-    fill: var(--footerSecondary);
+    max-width: 100vw;
+    overflow: hidden;
 }
 
 .svgFlipped {
-    transform: rotate(180deg);
+    margin-bottom: -8px;
 }
 
 .image {
@@ -1101,34 +1101,49 @@ body::-webkit-scrollbar-thumb:hover {
     background-position: center;
     background-size: cover;
     box-shadow: inset rgba(0, 0, 0, 0.4) 0 0 0 1000px;
-    margin-bottom: -8px;
 }
 
 .containerTransparent {
     background: transparent;
-    height: 200px;
     color: white;
 }
 
 .transparentHeader {
     font-size: 45px;
+    color: white;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    padding: 150px 0;
+    margin: 0;
+}
+
+.imageChild {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 
 /*CONTACT*/
 
+.contactImageHeader {
+    padding-bottom: 0;
+}
+
 .contactParent {
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     border-radius: 3px;
     padding: 10px 12px;
-    margin: 50px 0;
+    padding-top: 25px;
+    margin: 25px auto;
+    margin-bottom: 50px;
     width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     background: var(--secondaryShade);
-    backdrop-filter: blur( 8px);
 }
 
 @media all and (max-width: 700px) {
@@ -1142,15 +1157,39 @@ body::-webkit-scrollbar-thumb:hover {
     color: black;
 }
 
+.contactButtonContainer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.contactButtonContainer button {
+    margin: 0;
+}
+
 .sendButtonActive {
     pointer-events: none;
-    justify-content: center;
     box-shadow: rgba(0, 0, 0, 0.15) 0 8px 14px 0, rgba(0, 0, 0, 0.15) 0 18px 26px 0, inset rgba(0, 0, 0, 0.2) 0 0 0 10000px;
 }
 
 .sendButtonActive span {
     margin: 0;
     padding: 0;
+}
+
+.callButtonDefault strong {
+    max-width: 0;
+}
+
+.callButtonDefault span {
+    margin: 0;
+    padding: 0;
+}
+
+.callButtonActive {
+    pointer-events: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 8px 14px 0, rgba(0, 0, 0, 0.15) 0 18px 26px 0, inset rgba(0, 0, 0, 0.2) 0 0 0 10000px;
 }
 
 .contactAnchor {
