@@ -219,7 +219,17 @@ function wait(time) {
     })
 }
 
-async function sendMessage(element, icon) {
+async function sendMessage(element, icon, requirements) {
+
+    for (let requirement of requirements) {
+
+        let element = document.getElementById(requirement)
+
+        if (element.value == "") {
+
+            return
+        }
+    }
 
     element.childNodes[1].style.transform = "rotate(360deg)"
 

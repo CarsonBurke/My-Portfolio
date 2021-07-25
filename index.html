@@ -36,13 +36,13 @@
             <div class="navChild navRight">
                 <div class="navRightLeft animate">
 
-                    <a class="waveButton" data-wave-theme="dark" data-wave-strength="0.1" href="#mywork"><span class="material-icons-outlined">
+                    <a class="waveButton" data-wave-theme="dark" data-wave-strength="0.1" href="#myWork"><span class="material-icons-outlined">
                         folder_open
                         </span>My work</a>
-                    <a class="waveButton" data-wave-theme="dark" data-wave-strength="0.1" href="#"><span class="material-icons-outlined">
+                    <a class="waveButton" data-wave-theme="dark" data-wave-strength="0.1" href="#whyMe"><span class="material-icons-outlined">
                         person
                         </span>Why me</a>
-                    <a class="waveButton" data-wave-theme="dark" data-wave-strength="0.1" href="#"><span class="material-icons-outlined">
+                    <a class="waveButton" data-wave-theme="dark" data-wave-strength="0.1" href="#aboutMe"><span class="material-icons-outlined">
                         info
                         </span>About</a>
 
@@ -108,7 +108,7 @@
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, vero praesentium ad, harum at officia non asperiores numquam minus explicabo dolorum eaque! Sed ullam cumque beatae et veritatis nobis velit?
                     </p>
 
-                    <a href="#mywork" class="button heroButton animate floatUp waveButton"><span class="material-icons-outlined">
+                    <a href="#myWork" class="button heroButton animate floatUp waveButton"><span class="material-icons-outlined">
                         folder_open
                         </span>My Work</a>
 
@@ -122,11 +122,11 @@
 
         </section>
 
-        <div class="containerImage parallaxifyBg" style="background-image: url('materials/images/image1.jpg');">
+        <div class="containerImage parallaxifyBg" style="background-image: url('materials/images/myWork.jpg');">
 
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path class="svgSecondary" fill-opacity="1" d="M0,224L1440,160L1440,0L0,0Z"></path></svg>
 
-            <section class="containerTransparent displayParent">
+            <section class="containerTransparent displayParent" id="myWork">
                 <div class="displayChild">
 
                     <h3 class="displayHeader transparentHeader animate floatUp">My Work</h3>
@@ -136,7 +136,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="svgFlipped"><path class="svgSecondary" fill-opacity="1" d="M0,224L1440,160L1440,0L0,0Z"></path></svg>
 
         </div>
-        <section class="containerSecondary" id="mywork">
+        <section class="containerSecondary">
 
             <div class="menuButtonContainer">
                 <button class="menuButton menuItemButton waveButton animate floatUp" data-time="0.3" data-wave-theme="dark" onclick="menuSortItems( 'menuItem')">All</button>
@@ -176,11 +176,11 @@
             </div>
 
         </section>
-        <div class="containerImage parallaxifyBg" style="background-image: url( 'materials/images/image2.jpg');">
+        <div class="containerImage parallaxifyBg" style="background-image: url( 'materials/images/whyMe.jpg');">
 
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path class="svgSecondary" fill-opacity="1" d="M0,224L1440,160L1440,0L0,0Z"></path></svg>
 
-            <section class="containerTransparent displayParent">
+            <section class="containerTransparent displayParent" id="whyMe">
                 <div class="displayChild">
 
                     <h3 class="displayHeader transparentHeader animate floatUp">Why Me</h3>
@@ -205,11 +205,11 @@
             </div>
 
         </section>
-        <div class="containerImage parallaxifyBg" style="background-image: url( 'materials/images/image1.jpg');">
+        <div class="containerImage parallaxifyBg" style="background-image: url( 'materials/images/aboutMe.jpg');">
 
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path class="svgPrimary" fill-opacity="1" d="M0,224L1440,160L1440,0L0,0Z"></path></svg>
 
-            <section class="containerTransparent displayParent">
+            <section class="containerTransparent displayParent" id="aboutMe">
                 <div class="displayChild">
 
                     <h3 class="displayHeader transparentHeader animate floatUp">About Me</h3>
@@ -231,24 +231,24 @@
             </div>
 
         </section>
-        <div class="containerImage parallaxifyBg" style="background-image: url('materials/images/mountains.jpg');" id="contact">
+        <div class="containerImage parallaxifyBg" style="background-image: url('materials/images/mountains.jpg');">
 
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path class="svgSecondary" fill-opacity="1" d="M0,224L1440,160L1440,0L0,0Z"></path></svg>
 
-            <section class="displayParent parallaxifyBg">
+            <section class="displayParent parallaxifyBg" id="contact">
 
                 <form class="contactParent  animate floatUp">
 
                     <h3 class="displayHeader contactHeader">Send Me a Message</h3>
 
-                    <input type="name" placeholder="Name" class="input">
+                    <input id="contactName" required type="name" placeholder="Name" class="input">
 
-                    <textarea spellcheck="true" autocapitalize="true" autocomplete="true" name="" placeholder="Message" class="textArea"></textarea>
+                    <textarea id="contactMessage" required spellcheck="true" autocapitalize="true" autocomplete="true" name="" placeholder="Message" class="textArea"></textarea>
 
-                    <button class="button waveButton" id="sendButton" onclick="sendMessage(this, 'done')">
+                    <a class="contactAnchor" href="#contact"><button type="submit" class="button waveButton" id="sendButton" onclick="sendMessage(this, 'done', ['contactName', 'contactMessage'])">
                         <span class="material-icons-outlined">
                             send
-                            </span><strong>Send</strong></button>
+                            </span><strong>Send</strong></button></a>
 
                 </form>
 
