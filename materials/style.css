@@ -1311,13 +1311,15 @@ body::-webkit-scrollbar-thumb:hover {
 .footerLink {
     font-size: 16px;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 400;
     transition: all 0.3s;
     padding: 4px 0;
     width: fit-content;
-    background-size: 210%;
+    background-repeat: no-repeat;
+    background-size: 210% 210%;
     background-image: linear-gradient(90deg, var(--footerPrimary) 50%, transparent 50%);
     background-position-x: 100%;
+    background-position-y: -85%;
     color: var(--footerPrimary);
 }
 
@@ -1329,15 +1331,13 @@ body::-webkit-scrollbar-thumb:hover {
 
 .footerLink:hover {
     background-position-x: 0;
-    /* box-shadow: var(--footerPrimary) 0 2px 0 0; */
 }
 
 .footerLink:focus {
-    box-shadow: var(--footerPrimary) 0 2px 0 0;
+    background-position-x: 0;
     opacity: 0.8;
 }
 
 .footerLink:visited {
-    box-shadow: var(--footerPrimary) 0 0 0 0;
     opacity: 0.7;
 }
