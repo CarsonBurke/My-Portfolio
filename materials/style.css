@@ -12,6 +12,12 @@
     font-family: "Poppins";
 }
 
+strong {
+    font-weight: inherit;
+    max-width: 100px;
+    transition: all 0.3s;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -103,7 +109,7 @@ body::-webkit-scrollbar-thumb:hover {
 .bar3 {
     width: 30px;
     height: 4px;
-    background-color: rgb(0, 0, 0);
+    background-color: var(--navColor);
     margin: 8.5px 7.5px;
     transition: all 0.2s;
     position: relative;
@@ -153,7 +159,7 @@ body::-webkit-scrollbar-thumb:hover {
     margin: 0;
     margin-left: 10px;
     font-size: 30px;
-    font-weight: 500;
+    font-weight: 400;
     color: var(--navColor);
 }
 
@@ -464,6 +470,22 @@ body::-webkit-scrollbar-thumb:hover {
     color: white;
 }
 
+.svgPrimary {
+    fill: var(--primaryShade);
+}
+
+.svgSecondary {
+    fill: var(--secondaryShade);
+}
+
+.svgFooter {
+    fill: var(--footerSecondary);
+}
+
+.svgFlipped {
+    transform: rotate(180deg);
+}
+
 .image {
     width: 60%;
     aspect-ratio: 1 / 1;
@@ -482,7 +504,7 @@ body::-webkit-scrollbar-thumb:hover {
     width: fit-content;
     background: var(--primary);
     padding: 8px 30px;
-    font-weight: 350;
+    font-weight: 400;
     font-size: 18px;
     box-shadow: rgba(0, 0, 0, 0.2) 0 4px 10px 0;
     transition: all 0.3s;
@@ -490,6 +512,9 @@ body::-webkit-scrollbar-thumb:hover {
     border-radius: 3px;
     display: flex;
     align-items: center;
+    border: none;
+    cursor: pointer;
+    position: relative;
 }
 
 .button:hover {
@@ -503,6 +528,71 @@ body::-webkit-scrollbar-thumb:hover {
 .button span {
     font-size: 25px;
     padding-right: 8px;
+    transition: all 0.6s;
+}
+
+.input {
+    background: var(--primaryShade);
+    border: none;
+    padding: 12px 8px;
+    margin: 10px auto;
+    width: 90%;
+    outline: none;
+    border-radius: 3px;
+    font-size: 18px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0 4px 20px 0;
+    transition: all 0.3s;
+}
+
+.input:hover {
+    box-shadow: rgba(0, 0, 0, 0.14) 0 12px 30px 0;
+}
+
+.input:focus {
+    box-shadow: rgba(0, 0, 0, 0.14) 0 16px 22px 0;
+}
+
+.textArea {
+    background: var(--primaryShade);
+    border: none;
+    padding: 8px;
+    margin: 10px auto;
+    width: 90%;
+    outline: none;
+    border-radius: 3px;
+    font-size: 16px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0 4px 20px 0;
+    font-weight: 300;
+    width: 90%;
+    height: 120px;
+    max-width: 90%;
+    max-height: 400px;
+    transition: all 0.3s;
+}
+
+.textArea:hover {
+    box-shadow: rgba(0, 0, 0, 0.14) 0 12px 30px 0;
+}
+
+.textArea:focus {
+    box-shadow: rgba(0, 0, 0, 0.14) 0 16px 22px 0;
+}
+
+.tooltip {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: var(--primary);
+    color: white;
+    font-weight: 400;
+    width: fit-content;
+    margin: auto;
+    padding: 8px 30px;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0 4px 20px 0;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
 }
 
 
@@ -572,7 +662,7 @@ body::-webkit-scrollbar-thumb:hover {
     width: 80%;
     margin: 30px auto;
     margin-bottom: 0;
-    font-weight: 300;
+    font-weight: 200;
 }
 
 @media all and (max-width: 600px) {
@@ -682,8 +772,7 @@ body::-webkit-scrollbar-thumb:hover {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-image: url("images/image2.jpg");
-    box-shadow: inset rgba(0, 0, 0, 0.5) 0 0 0 1000px;
+    box-shadow: inset rgba(0, 0, 0, 0.3) 0 0 0 1000px;
     color: white;
 }
 
@@ -937,39 +1026,130 @@ body::-webkit-scrollbar-thumb:hover {
     margin: 10px;
     padding: 10px 40px;
     font-size: 18px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0 12px 56px 0;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 5px 15px 0;
     transition: all 0.3s;
     border-radius: 3px;
 }
 
-.menuButton:hover {
-    box-shadow: rgba(0, 0, 0, 0) 0 12px 36px 0, inset rgba(0, 0, 0, 0.3) 0 0 0 10000px;
+.menuButtonActive {
+    box-shadow: rgba(0, 0, 0, 0) 0 5px 15px 0, inset rgba(0, 0, 0, 0.3) 0 0 0 10000px !important;
 }
 
-.menuButtonActive {
-    box-shadow: rgba(0, 0, 0, 0) 0 12px 36px 0, inset rgba(0, 0, 0, 0.3) 0 0 0 10000px;
+.menuButton:hover {
+    box-shadow: rgba(0, 0, 0, 0.3) 0 5px 15px 0, inset rgba(0, 0, 0, 0.3) 0 0 0 10000px;
 }
 
 .menuContainer {
     display: flex;
     justify-content: center;
-    align-items: baseline;
+    align-items: flex-start;
     flex-wrap: wrap;
 }
 
 .menuItem {
-    text-align: center;
     font-size: 20px;
     margin: 10px;
     padding: 10px;
-    width: 250px;
-    height: 250px;
-    background: var(--quaternaryShade);
-    box-shadow: rgba(0, 0, 0, 0.1) 0 12px 40px 0;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background: var(--primaryShade)
 }
 
 .menuItemHide {
     display: none;
+}
+
+.menuItemChild {
+    width: 100%;
+}
+
+.menuItemHeader {
+    margin: 0;
+    font-size: 1.6rem;
+    padding: 14px 0;
+    font-weight: 500;
+    text-align: center;
+}
+
+.menuItemText {
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.menuItemImage {
+    width: 300px;
+    aspect-ratio: 1080/920;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 4px 8px 0;
+}
+
+.menuItemButtonContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/*IMAGE TRANSPARENT*/
+
+.containerImage {
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset rgba(0, 0, 0, 0.4) 0 0 0 1000px;
+    margin-bottom: -8px;
+}
+
+.containerTransparent {
+    background: transparent;
+    height: 200px;
+    color: white;
+}
+
+.transparentHeader {
+    font-size: 45px;
+}
+
+
+/*CONTACT*/
+
+.contactParent {
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border-radius: 3px;
+    padding: 10px 12px;
+    margin: 50px 0;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: var(--secondaryShade);
+    backdrop-filter: blur( 8px);
+}
+
+@media all and (max-width: 700px) {
+    .contactParent {
+        width: 90%;
+    }
+}
+
+.contactHeader {
+    margin: 20px 0;
+    color: black;
+}
+
+.sendButtonActive {
+    pointer-events: none;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 8px 14px 0, rgba(0, 0, 0, 0.15) 0 18px 26px 0, inset rgba(0, 0, 0, 0.2) 0 0 0 10000px;
+}
+
+.sendButtonActive span {
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -977,12 +1157,12 @@ body::-webkit-scrollbar-thumb:hover {
 
 .footer {
     --footerPrimary: #2B92F1;
-    --footerTertiary: rgb(40, 40, 53);
+    --footerPrimaryShade: rgb(40, 40, 53);
     display: flex;
     flex-wrap: wrap;
     color: white;
     padding: 20px 5%;
-    background: var(--footerTertiary);
+    background: var(--footerPrimaryShade);
     justify-content: space-between;
     overflow: hidden;
 }
@@ -1098,7 +1278,6 @@ body::-webkit-scrollbar-thumb:hover {
 
 .footerLink:hover {
     background-position-x: 0;
-    color: white;
     /* box-shadow: var(--footerPrimary) 0 2px 0 0; */
 }
 

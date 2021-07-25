@@ -168,3 +168,67 @@ function slideBack() {
         }
     }
 }
+/* window.addEventListener("load", tooltipStyles)
+
+function tooltipStyles() {
+
+    let tooltips = document.getElementsByClassName("tooltip")
+
+    for (let tooltip of tooltips) {
+
+        let parent = document.getElementById(tooltip.dataset.tooltipFor)
+
+        let topAmount = parent.getBoundingClientRect().top * 0.5
+
+        topAmount -= tooltip.offsetHeight * 0.25
+
+        tooltip.style.top = topAmount + "px"
+    }
+}
+
+function wait(time) {
+    return new Promise((resolve, reject) => {
+        setTimeout(function() {
+            resolve()
+        }, time)
+    })
+}
+
+function tooltipShow(parent) {
+
+    let tooltips = document.getElementsByClassName("tooltip")
+
+    for (let tooltip of tooltips) {
+
+        let tooltipParent = document.getElementById(tooltip.dataset.tooltipFor)
+
+        if (tooltipParent == parent) {
+
+            tooltip.style.opacity = "1"
+
+            break
+        }
+    }
+} */
+
+function wait(time) {
+    return new Promise((resolve, reject) => {
+        setTimeout(function() {
+            resolve()
+        }, time)
+    })
+}
+
+async function sendMessage(element, icon) {
+
+    element.childNodes[1].style.transform = "rotate(360deg)"
+
+    await wait(300)
+
+    element.childNodes[1].innerHTML = icon
+
+    element.childNodes[2].style.maxWidth = 0
+    element.childNodes[2].style.opacity = 0
+
+    element.classList.add("sendButtonActive")
+}
