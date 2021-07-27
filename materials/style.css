@@ -99,7 +99,7 @@ body::-webkit-scrollbar-thumb:hover {
     margin-left: 0;
     cursor: pointer;
     transition: all 0.3s;
-    margin-right: 25px;
+    padding-right: 5px;
 }
 
 .navSideBarButton:hover {}
@@ -142,7 +142,8 @@ body::-webkit-scrollbar-thumb:hover {
     transition: all 0.3s;
     text-decoration: none;
     width: fit-content;
-    padding: 0 8px;
+    gap: 5px;
+    height: 55px;
 }
 
 .navTopper:hover {
@@ -156,7 +157,6 @@ body::-webkit-scrollbar-thumb:hover {
 .navIcon {
     width: 45px;
     height: 45px;
-    padding: 5px 0;
 }
 
 .navHeader {
