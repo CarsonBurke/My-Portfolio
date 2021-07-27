@@ -1,0 +1,13 @@
+{
+    "name": "PWA name",
+    "start_url": "/",
+    "background_color": "hsl(209, 88%, 56%)",
+    "theme_color": "hsl(209, 88%, 56%)",
+    "display": "standalone",
+    "description": "PWA description",
+    "icons": [{
+        "src": "materials/images/carsonIcon.png",
+        "type": "image/png",
+        "sizes": "1080x1080"
+    }]
+}

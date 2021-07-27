@@ -4,9 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="SEO keywords">
+    <meta name="description" content="SEO description">
+    <meta name="theme-color" content="hsl(209, 88%, 56%)">
+    <meta property="og:image" content="materials/images/carsonIcon.png" />
+
+    <link rel="apple-touch-icon" href="materials/images/carsonIcon.png">
+    <link rel="manifest" href="/manifest.json">
     <link rel="icon" href="materials/images/carsonIcon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
     <link href="materials/style.css" rel="stylesheet" type="text/css" />
+
     <title>Title</title>
 </head>
 
@@ -67,6 +75,9 @@
             <a class="waveButton" data-wave-theme="dark" data-wave-strength="0.1" href="#aboutMe"><span class="material-icons-outlined">
                 info
                 </span>About</a>
+            <a class="waveButton" data-wave-theme="dark" data-wave-strength="0.1" href="#contactMe"><span class="material-icons-outlined">
+                chat
+                </span>Contact</a>
 
         </div>
     </nav>
@@ -77,13 +88,13 @@
 
                 <header class="heroTopper">
 
-                    <h1 class="heroHeader animate floatDown" data-time="0.4">Carson Burke</h1>
+                    <h1 class="heroHeader animate floatDown" data-time="0.8">Carson Burke</h1>
 
-                    <p class="heroText animate floatDown" data-time="0.6">
+                    <h2 class="heroText animate floatDown" data-time="0.4">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, vero praesentium ad, harum at officia non asperiores numquam minus explicabo dolorum eaque! Sed ullam cumque beatae et veritatis nobis velit?
-                    </p>
+                    </h2>
 
-                    <a href="#myWork" class="button heroButton animate floatUp waveButton"><span class="material-icons-outlined">
+                    <a href="#myWork" class="button heroButton animate floatUp waveButton" data-time="0.4"><span class="material-icons-outlined">
                         folder_open
                         </span>My Work</a>
 
@@ -140,6 +151,12 @@
         </div>
         <section class="containerSecondary">
 
+            <!--
+
+                Make each section have an image slider with a header of the section. Imagine slider is iframe of site placed over laptop image
+
+             -->
+
             <div class="menuButtonContainer">
                 <button class="menuButton menuItemButton waveButton animate floatUp" data-time="0.3" data-wave-theme="dark" onclick="menuSortItems( 'menuItem')">All</button>
                 <button class="menuButton htmlcssButton waveButton animate floatUp" data-time="0.4" data-wave-theme="dark" onclick="menuSortItems( 'htmlcss')">HTML & CSS</button>
@@ -151,12 +168,12 @@
                 <div class="menuItem htmlcss animate floatUp" data-show-value="0">
                     <div class="menuItemChild">
 
-                        <img src="materials/images/image1.jpg" alt="" class="menuItemImage">
+                        <img src="materials/images/carsonIcon.png" alt="" class="menuItemImage">
 
                     </div>
                     <div class="menuItemChild">
 
-                        <h3 class="menuItemHeader">Affairs and Order</h3>
+                        <h2 class="menuItemHeader">Affairs and Order</h2>
 
                         <p class="menuItemText">Minim non cupidatat ipsum magna in anim nisi nisi. Irure occaecat laborum do consequat cupidatat laborum ipsum magna tempor nulla quis officia.</p>
 
@@ -182,7 +199,7 @@
 
             <div class="slant slantSecondary slantTopRight"></div>
 
-            <h3 class="transparentHeader animate floatUp" id="whyMe">Why Me</h3>
+            <h2 class="transparentHeader animate floatUp" id="whyMe">Why Me</h2>
 
             <div class="slant slantPrimary slantBottomRight"></div>
 
@@ -197,7 +214,7 @@
             </div>
             <div class="displayChild animate floatUp">
 
-                <img src="materials/images/image2.jpg" alt="" class="displayImage image">
+                <img src="materials/images/carsonIcon.png" alt="" class="displayImage image">
 
             </div>
 
@@ -206,7 +223,7 @@
 
             <div class="slant slantPrimary slantTopLeft"></div>
 
-            <h3 class="transparentHeader animate floatUp" id="aboutMe">About Me</h3>
+            <h2 class="transparentHeader animate floatUp" id="aboutMe">About Me</h2>
 
             <div class="slant slantPrimary slantBottomLeft"></div>
 
@@ -215,7 +232,7 @@
 
             <div class="displayChild">
 
-                <img src="materials/images/image1.jpg" alt="" class="boxImage image">
+                <img src="materials/images/carsonIcon.png" alt="" class="boxImage image">
 
                 <h3 class="displayHeader animate floatUp">Header</h3>
                 <p class="displayText animate floatUp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil corporis error at asperiores consequatur cupiditate tenetur quisquam vel, facilis ipsa incidunt iste a alias autem blanditiis, hic quidem repellat! Recusandae!</p>
@@ -229,7 +246,7 @@
 
                 <div class="slant slantPrimary slantTopRight"></div>
 
-                <h3 class="transparentHeader contactImageHeader animate floatUp" id="contactMe">Contact Me</h3>
+                <h2 class="transparentHeader contactImageHeader animate floatUp" id="contactMe">Contact Me</h2>
 
                 <form class="contactParent  animate floatUp">
 
@@ -239,12 +256,12 @@
 
                     <div class="contactButtonContainer">
 
-                        <button type="button" class="button waveButton" id="sendButton" onclick="sendMessage(this, 'done', ['contactName', 'contactMessage'])">
+                        <button type="button" class="button waveButton" onclick="sendMessage(this, 'done', ['contactName', 'contactMessage'])">
                             <span class="material-icons-outlined">
                                 send
                                 </span><strong>Send</strong></button>
 
-                        <button type="button" class="button waveButton callButtonDefault" id="sendButton" onclick="changeText(this, '778-834-9818')">
+                        <button type="button" class="button waveButton callButtonDefault" onclick="changeText(this, '778-834-9818')">
                                     <span class="material-icons-outlined">
                                         call
                             </span><strong></strong></button>
@@ -263,7 +280,7 @@
             <div class="footerTopper">
 
                 <img src="materials/images/carsonIcon.png" alt="" class="footerIcon">
-                <h1 class="footerHeader">Carson Burke</h1>
+                <h2 class="footerHeader">Carson Burke</h2>
 
             </div>
             <div class="footerCopyright">© 2021</div>
@@ -273,25 +290,25 @@
 
                 <h3 class="footerContentHeader">Portfolio</h3>
 
-                <a href="https://carsonburke.github.io/My-Portfolio/" target="_blank" class="footerLink">Home</a>
-                <a href="https://carsonburke.github.io/My-Portfolio/#myWork" target="_blank" class="footerLink">My Projects</a>
-                <a href="https://carsonburke.github.io/My-Portfolio/#contact" target="_blank" class="footerLink">Contact</a>
+                <a href="https://carsonburke.github.io/My-Portfolio/" target="_blank" class="footerLink" rel="noreferrer">Home</a>
+                <a href="https://carsonburke.github.io/My-Portfolio/#myWork" target="_blank" class="footerLink" rel="noreferrer">My Projects</a>
+                <a href="https://carsonburke.github.io/My-Portfolio/#contact" target="_blank" class="footerLink" rel="noreferrer">Contact</a>
 
             </div>
             <div class="footerContentChild">
 
                 <h3 class="footerContentHeader">Web dev tools</h3>
 
-                <a href="https://carsonburke.github.io/Scroller-JS-scroll-animation-framework/" target="_blank" class="footerLink">Scroller</a>
-                <a href="https://carsonburke.github.io/Parallaxify-JS-parallax-framework/" target="_blank" class="footerLink">Parallaxify</a>
-                <a href="https://carsonburke.github.io/Wave-button/" target="_blank" class="footerLink">Wave</a>
+                <a href="https://carsonburke.github.io/Scroller-JS-scroll-animation-framework/" target="_blank" class="footerLink" rel="noreferrer">Scroller</a>
+                <a href="https://carsonburke.github.io/Parallaxify-JS-parallax-framework/" target="_blank" class="footerLink" rel="noreferrer">Parallaxify</a>
+                <a href="https://carsonburke.github.io/Wave-button/" target="_blank" class="footerLink" rel="noreferrer">Wave</a>
 
             </div>
             <div class="footerContentChild">
 
                 <h3 class="footerContentHeader">Other</h3>
 
-                <a href="https://www.affairsandorder.com/" target="_blank" class="footerLink">Support My Work</a>
+                <a href="https://www.affairsandorder.com/" target="_blank" class="footerLink" rel="noreferrer">Support My Work</a>
 
             </div>
         </div>
