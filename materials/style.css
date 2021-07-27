@@ -146,7 +146,11 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .navTopper:hover {
-    background: var(--secondaryShade);
+    box-shadow: inset var(--primary) 0 -3px 0 0;
+}
+
+.navTopper:focus {
+    box-shadow: inset var(--primary) 0 -3px 0 0;
 }
 
 .navIcon {
