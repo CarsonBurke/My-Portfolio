@@ -593,7 +593,7 @@ body::-webkit-scrollbar-thumb:hover {
     width: 100%;
     padding: 0;
     padding-top: 55px;
-    padding-bottom: 200px;
+    padding-bottom: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -618,7 +618,7 @@ body::-webkit-scrollbar-thumb:hover {
     background-size: cover;
     background-position: center;
     background-image: url("images/heroImage.jpg");
-    box-shadow: inset rgba(0, 0, 0, 0.55) 0 0 0 1000px;
+    box-shadow: inset rgba(0, 0, 0, 0.60) 0 0 0 1000px;
     color: white;
 }
 
