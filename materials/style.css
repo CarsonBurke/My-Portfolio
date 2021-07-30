@@ -31,17 +31,23 @@ body {
 }
 
 body::-webkit-scrollbar {
-    width: 14px;
+    width: 16px;
     background: #e3e9f0;
 }
 
 body::-webkit-scrollbar-thumb {
-    background: #36394550;
-    width: 100%;
+    background: var(--primary);
+    border-radius: 100px;
+    transition: all 0.3s;
+    border-top: 3px solid #e3e9f0;
+    border-bottom: 3px solid #e3e9f0;
+    border-left: 3px solid #e3e9f0;
+    border-right: 3px solid #e3e9f0;
 }
 
 body::-webkit-scrollbar-thumb:hover {
-    background: #36394580;
+    background: var(--primary);
+    box-shadow: inset rgba(0, 0, 0, 0.3) 0 0 30px 0;
 }
 
 
@@ -1237,6 +1243,45 @@ body::-webkit-scrollbar-thumb:hover {
 .slantBottomLeft {
     clip-path: polygon(0% 50%, 0% 100%, 100% 100%);
 }
+
+
+/*ABOUT*/
+
+.aboutImage {
+    border-radius: 100%;
+    box-shadow: none;
+    padding: 20px 0;
+}
+
+.aboutCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 400px;
+    border-radius: 10px;
+    background: var(--primaryShade);
+    box-shadow: rgba(0, 0, 0, 0.07) 0 12px 40px 0;
+    transition: all 0.3s;
+    user-select: none;
+    padding-top: 70px;
+    position: relative;
+    overflow: hidden;
+}
+
+.aboutHeader {
+    background: var(--secondaryShade);
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 70px;
+    line-height: 70px;
+    color: black;
+}
+
+.aboutText {}
 
 
 /*CONTACT*/
