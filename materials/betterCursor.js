@@ -5,7 +5,7 @@ function addStyles() {
     
     @keyframes cursorPulse {
         0% {
-            box-shadow: hsl(209, 88%, 56%) 0 0 0 2px;
+            box-shadow: hsl(209, 88%, 56%, 0.6) 0 0 0 2px;
         }
         100% {
             box-shadow: hsl(209, 88%, 56%, 0) 0 0 0 60px;
