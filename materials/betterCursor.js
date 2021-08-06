@@ -2,6 +2,15 @@ addStyles()
 
 function addStyles() {
     let styles = `
+    
+    @keyframes cursorPulse {
+        0% {
+            box-shadow: hsl(209, 88%, 56%) 0 0 0 2px;
+        }
+        100% {
+            box-shadow: hsl(209, 88%, 56%, 0) 0 0 0 60px;
+        }
+    }
 
     * {
     cursor: none !important;
@@ -25,6 +34,9 @@ function addStyles() {
     .cursorDown {
         width: 17.5px;
         box-shadow:  rgb(0,0,0,0.3) 0 1px 3px 0;
+    }
+    .cursorAnimation {
+        animation: cursorPulse 0.4s;
     }
     `
 
@@ -76,4 +88,25 @@ window.addEventListener("mouseup", cursorUp)
 function cursorUp() {
 
     cursor.classList.remove("cursorDown")
+}
+
+window.addEventListener("click", cursorAnimation)
+
+async function cursorAnimation(e) {
+
+    if (e.target.classList.contains("waveButton")) return
+
+    cursor.classList.add("cursorAnimation")
+
+    function timer(seconds) {
+        return new Promise((resolve, reject) => {
+            setTimeout(function() {
+                resolve()
+            }, seconds * 1000)
+        })
+    }
+
+    await timer(0.4)
+
+    cursor.classList.remove("cursorAnimation")
 }
