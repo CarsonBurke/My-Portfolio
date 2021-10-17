@@ -523,6 +523,11 @@ body::-webkit-scrollbar-thumb:hover {
     transition: all 0.6s;
 }
 
+.buttonDisabled {
+    cursor: not-allowed;
+    box-shadow: rgb(0 0 0 / 15%) 0 8px 14px 0, rgb(0 0 0 / 5%) 0 18px 26px 0, inset rgb(0 0 0 / 25%) 0 0 0 10000px;
+}
+
 .input {
     background: var(--primaryShade);
     border: none;
@@ -1052,15 +1057,18 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .menuItem {
+    overflow: hidden;
     font-size: 20px;
     margin: 10px;
-    padding: 10px;
-    width: 500px;
+    width: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     gap: 20px;
-    background: var(--primaryShade)
+    background: var(--primaryShade);
+    box-shadow: rgb(0 0 0 / 7%) 0 12px 40px 0;
+    border-radius: 3px;
 }
 
 .menuItemHide {
@@ -1077,6 +1085,16 @@ body::-webkit-scrollbar-thumb:hover {
     padding: 14px 0;
     font-weight: 500;
     text-align: center;
+    width: 100%;
+    background: var(--secondaryShade);
+}
+
+.menuItemCatagory {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 500;
+    opacity: 0.6;
 }
 
 .menuItemText {
@@ -1088,12 +1106,17 @@ body::-webkit-scrollbar-thumb:hover {
 .menuItemImage {
     width: 300px;
     border-radius: 3px;
-    box-shadow: rgba(0, 0, 0, 0.3) 0 4px 8px 0;
 }
 
 .menuItemButtonContainer {
     display: flex;
-    flex-wrap: wrap;
+    width: 90%;
+    gap: 20px;
+}
+
+.menuItemButtonContainer a {
+    width: 100%;
+    text-align: center;
 }
 
 
